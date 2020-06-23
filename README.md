@@ -6,7 +6,7 @@ The library does not make any sanity checks of the parsed ERD text (PKs on relat
 ## Syntax
 The supported syntax is something like
 ```
-Entity1 ( Attribute1, Attribute2, _PrimaryKey_, ... )
+Entity1 ( Attribute1, Attribute2, _PrimaryKey_ )
 Entity2 ( _PrimaryKey_, Attribute1, Attribute2)
 
 relationship(Entity1[0,*], Entity2 [1,4], anotherattribute)
@@ -19,7 +19,7 @@ We use the great [`https://github.com/alecthomas/participle`](https://github.com
 
 ## Limitations
 
-- Attribute names **must not** contain underscores `_`.
+- Attribute names **must** contain **only** characters (in upper or lower case) and numbers, but no "special" characters (`_`,`-`, etc).
 
 
 ## Example 
